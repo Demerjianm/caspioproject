@@ -70,7 +70,7 @@ const options ={
 	method:'GET',
 	headers:{
 		'Accept':'application/json',
-		'authorization':'bearer '+token
+		'authorization':'bearer ' + token
 	}
 };
 request(options, function (error, response, body) {
@@ -446,6 +446,6 @@ app.post('/insert',function(req,res){
 
 
 })
-app.listen(8000, function () {
+app.listen(process.env.PORT, function () {
     console.log('Example app listening on port 3000!')
 })
