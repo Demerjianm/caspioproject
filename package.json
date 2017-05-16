@@ -1,9 +1,9 @@
 {
   "name": "project_caspio",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,8 +11,19 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "querystring": "^0.2.0",
     "request": "^2.81.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Demerjianm/caspioproject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Demerjianm/caspioproject/issues"
+  },
+  "homepage": "https://github.com/Demerjianm/caspioproject#readme",
+  "description": ""
 }

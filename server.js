@@ -10,16 +10,25 @@ var token;
 var user;
 var key='g8jc7g';
 var id=11347;
+
 //var host ='https://c4arw748.caspio.com';
 app.use(bodyParser.urlencoded({extended: true}))
 //app.use(bodyParser.json())
 //app.use(express.static('public'));
+
+console.log(process.env.GRANT)
+//	client__id: process.env.CLIENTID,
+//	client_secret: process.env.CLIENTSECRET
+
+
 var data=
 	    {
-			grant_type:'client_credentials',
-			client_id:'6db26174368141e577315012d9e42040383e94188919729129',
-          client_secret:'c1b07f08052d44688230a9aecb424a60a79e74262acce21fa0'
+			grant_type: process.env.GRANT,
+			client_id: process.env.CLIENTID,
+      client_secret: process.env.CLIENTSECRET
 		}
+
+
 	//getting  token
 function get_token(){
 	console.log('getting token');
@@ -91,6 +100,7 @@ function merge_doc(key,id){
 		            //mapping caspio data and webmerge
 
 							"Company":user[0].About_G,
+							"Date":user[0].Date,
 							"Zipcode":user[0].Zipcode_G,
 							"City":user[0].City_G,
 							"State":user[0].State_G,
@@ -370,6 +380,25 @@ function merge_doc(key,id){
 							"ClockTotal":user[0].TotalClockPrice,
 							"ClockPrice1":user[0].TimeClockPrice1,
 							"ClockPrice2":user[0].TimeClockPrice2,
+							"Cobra1":user[0].CobraCost1,
+							"Cobra2":user[0].CobraCost2,
+							"Cobra3":user[0].CobraCost3,
+							"Cobra4":user[0].CobraCost4,
+							"Cobra5":user[0].CobraCost5,
+							"Cobra6":user[0].CobraCost6,
+							"CobraSU1":user[0].CobraSU1,
+							"LaborSU1":user[0].LaborPosterSU1,
+							"LaborSU2":user[0].LaborPosterSU2,
+							"LaborSU3":user[0].LaborPosterSU3,
+							"LaborSU4":user[0].LaborPosterSU4,
+							"LaborSU5":user[0].LaborPosterSU5,
+							"LaborSU6":user[0].LaborPosterSU6,
+							"LaborLaw1":user[0].LaborPosterCost1,
+							"LaborLaw2":user[0].LaborPosterCost2,
+							"LaborLaw3":user[0].LaborPosterCost3,
+							"LaborLaw4":user[0].LaborPosterCost4,
+							"LaborLaw5":user[0].LaborPosterCost5,
+							"LaborLaw6":user[0].LaborPosterCost6,
 		}
 };
 
@@ -415,6 +444,6 @@ app.post('/insert',function(req,res){
 
 
 })
-app.listen(3000, function () {
+app.listen(8000, function () {
     console.log('Example app listening on port 3000!')
 })
