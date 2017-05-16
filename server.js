@@ -10,6 +10,7 @@ var token;
 var user;
 var key='g8jc7g';
 var id=11347;
+var x = 10;
 
 //var host ='https://c4arw748.caspio.com';
 app.use(bodyParser.urlencoded({extended: true}))
