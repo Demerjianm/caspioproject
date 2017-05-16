@@ -1,12 +1,15 @@
 {
   "name": "project_caspio",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node -r dotenv/config server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -15,6 +18,9 @@
     "express": "^4.15.2",
     "querystring": "^0.2.0",
     "request": "^2.81.0"
+  },
+  "engines": {
+    "node": "7.9.0"
   },
   "devDependencies": {},
   "repository": {

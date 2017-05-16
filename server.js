@@ -5,12 +5,13 @@ var https = require('https');
 var request = require('request');
 var path =require('path');
 var fs=require('fs');
+var mime = require('mime')
 const bodyParser = require('body-parser');
 var token;
 var user;
 var key='g8jc7g';
 var id=11347;
-var x = 10;
+var x = 10
 
 //var host ='https://c4arw748.caspio.com';
 app.use(bodyParser.urlencoded({extended: true}))
